@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            /* background-color: red; */
+            margin: 100px auto;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        align-items: center;       
+        border-radius: 50px; 
+    }
+    
+    .komputer{
+        background-color:lawngreen;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        height: 300px; 
+        position: relative;
+    }
+    .komputer img{
+        margin-bottom: 30px;
+    }
+   
+   
+   .user{
+    background-color: lightskyblue;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 50px;
+        height: 300px; 
+        margin-top: 40px;
+        position: relative;
+   }
+   .user img{
+    margin-top: 30px;
+
+   }
+    .infoHasil{
+        background-color: white;
+        width: 250px;
+        height: 80px;
+        border-radius: 40px;
+        position: absolute;
+        border: 5px solid saddlebrown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'comic sans ms';
+        font-size: 30px;
+        font-weight: 700;
+        z-index: 2;
+        margin-left: 180px;
+        margin-top: -20px;
+        /* position: relative; */
+        /* left:20px ; */
+    }
+    .aturWarna{
+        width: 200px;
+        position: absolute;
+        left: 10px;
+        height: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .aturWarna h1{
+        font-size: 14px;
+        text-align: center;
+        font-family: 'comic sans Ms';
+    }
+    .aturWarna span{
+        font-size: 13px;
+        text-align: center;
+        font-family: tahoma;
+    }
+        .aturWarnaKomputer{
+            background-color: whitesmoke;
+            width: 200px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 3px solid black;
+            /* height: 200px; */
+        }
+        .aturWarnaUser{
+            background-color: whitesmoke;
+            width: 200px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 3px solid black;
+        }
+   
+    .kotak{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    @keyframes scale {
+        0%{
+            transform: scale(1);
+        }100%{
+            transform: scale(1);
+            box-shadow: 0px 0px 10px red;
+        }
+        
+    }
+    .gambarUser:active{
+        position: relative;
+        top: 20px;
+        transition: 1s;
+    }
+    @media screen and (max-width:800px){
+    .container{
+        display: grid;
+        display: flex;
+    }
+    .aturWarna{
+        display: flex;
+        flex-direction: row;
+        width: 480px;
+        height: 160px;
+        margin-top: -500px;
+        margin-left: 80px;
+        margin-right: auto;
+    }
+    .infoHasil{
+        z-index: 2;
+        margin-left: 138px;
+        margin-top: -24px;
+    }
+    img{
+        width: 180px;
+    }
+    
+    .geser{
+        margin-top: 500px;
+    }
+}
+   
+   
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="aturWarna">
+            <div class="aturWarnaKomputer">
+                <h1>Warna Background</h1>
+
+                <div class="kotak">
+
+                    <div >
+                    <span>Red :</span>
+                    <span>Blue :</span>
+                    <span>Green :</span>
+                    </div>
+    
+                    <div>
+                    <input type="range" class="slideKomputer" min="0" max="255">
+                    <input type="range" class="slideKomputer slide2" min="0" max="255">
+                   <input type="range" class="slideKomputer slide3" min="0" max="255">
+                    </div>
+    
+                </div>
+            
+            </div>
+            <div class="aturWarnaUser">
+                <h1>Warna Background</h1>
+                <div class="kotak">
+
+                    <div >
+                    <span>Red :</span>
+                    <span>Blue :</span>
+                    <span>Green :</span>
+                    </div>
+    
+                    <div>
+                    <input type="range" class="slideKomputer slideUser" min="0" max="255">
+                    <input type="range" class="slideKomputer slide2 slideUser" min="0" max="255">
+                   <input type="range" class="slideKomputer slide3 slideUser" min="0" max="255">
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="geser">
+        <div class="komputer">
+            <img src='gajah.png' alt="" width="200" height="200" class="gambarKomputer">
+            
+        </div>
+        <div class="infoHasil">
+            
+        </div>
+        <div class="user">
+            <img src="semut.png" alt="" width="200" class="semut gambarUser">
+            <img src="gajah.png" alt="" width="200" class="gajah gambarUser">
+            <img src="orang.png" alt="" width="200" class="orang gambarUser">
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
